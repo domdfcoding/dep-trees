@@ -27,7 +27,7 @@ Utility functions.
 #
 
 # stdlib
-from collections.abc import Iterator
+from typing import Dict, Iterator, Set
 
 # 3rd party
 from domdf_python_tools.iterative import Branch
@@ -41,7 +41,7 @@ from shippinglabel_pypi import get_wheel_url
 
 __all__ = ["get_dependencies", "get_dependency_tree", "iter_my_repos"]
 
-dependency_cache: dict[str, set[ComparableRequirement]] = {}
+dependency_cache: Dict[str, Set[ComparableRequirement]] = {}
 
 users = [
 		"domdfcoding",
@@ -68,7 +68,7 @@ def iter_my_repos(client: GitHub) -> Iterator[ShortRepository]:
 	yield from iter_repos(client, users, organizations)
 
 
-def get_dependencies(requirement: ComparableRequirement) -> set[ComparableRequirement]:
+def get_dependencies(requirement: ComparableRequirement) -> Set[ComparableRequirement]:
 	"""
 	Returns the direct dependencies of the given requirement.
 
