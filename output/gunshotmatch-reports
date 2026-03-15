@@ -1,0 +1,582 @@
+gunshotmatch-reports
+├── domdf-python-tools>=3.8.0.post2
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── libgunshotmatch>=0.5.0
+│   ├── attrs>=23.1.0
+│   ├── chemistry-tools>=v1.0.0b2
+│   │   ├── apeye>=0.9.1
+│   │   │   ├── apeye-core>=1.0.0b2
+│   │   │   │   ├── domdf-python-tools>=2.6.0
+│   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   └── idna>=2.5
+│   │   │   ├── domdf-python-tools>=2.6.0
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   ├── platformdirs>=2.3.0
+│   │   │   └── requests>=2.24.0
+│   │   │       ├── certifi>=2017.4.17
+│   │   │       ├── charset_normalizer<4,>=2
+│   │   │       ├── idna<4,>=2.5
+│   │   │       └── urllib3<3,>=1.21.1
+│   │   ├── cachecontrol>=0.13.1
+│   │   │   ├── msgpack<2.0.0,>=0.5.2
+│   │   │   └── requests>=2.16.0
+│   │   │       ├── certifi>=2017.4.17
+│   │   │       ├── charset_normalizer<4,>=2
+│   │   │       ├── idna<4,>=2.5
+│   │   │       └── urllib3<3,>=1.21.1
+│   │   ├── domdf-python-tools>=3.6.1
+│   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.20
+│   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   ├── natsort>=7.0.1
+│   │   │   └── typing-extensions>=3.7.4.1
+│   │   ├── enum-tools>=0.10.0
+│   │   │   ├── pygments>=2.6.1
+│   │   │   └── typing-extensions>=3.7.4.3
+│   │   ├── filelock>=3.8.0
+│   │   ├── memoized-property>=1.0.3
+│   │   ├── numpy>=1.22
+│   │   ├── pandas>=2.0.0
+│   │   ├── quantities>=0.12.4
+│   │   │   └── numpy>=1.24
+│   │   ├── requests>=2.31.0
+│   │   │   ├── certifi>=2017.4.17
+│   │   │   ├── charset_normalizer<4,>=2
+│   │   │   ├── idna<4,>=2.5
+│   │   │   └── urllib3<3,>=1.21.1
+│   │   └── typing-extensions>=4.1.1
+│   ├── dom-toml[config]>=2.2.0
+│   │   ├── domdf-python-tools>=2.8.0
+│   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.20
+│   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   ├── natsort>=7.0.1
+│   │   │   └── typing-extensions>=3.7.4.1
+│   │   └── tomli>=1.2.3; python_version < "3.11"
+│   ├── domdf-python-tools>=3.6.1
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   ├── enum-tools>=0.10.0
+│   │   ├── pygments>=2.6.1
+│   │   └── typing-extensions>=3.7.4.3
+│   ├── mathematical>=0.5.1
+│   │   ├── domdf-python-tools>=2.7.0
+│   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.20
+│   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   ├── natsort>=7.0.1
+│   │   │   └── typing-extensions>=3.7.4.1
+│   │   ├── numpy>=1.19.1; platform_system != "Windows"
+│   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
+│   │   ├── pandas>=1.0.1
+│   │   └── typing-extensions>=3.7.4.3
+│   ├── numpy>=1.22
+│   ├── pandas>=2.0.3
+│   ├── pymassspec>=2.3.0
+│   │   ├── biopython>=1.74
+│   │   ├── cftime<=1.3.0; python_version == "3.6" and platform_system == "Windows"
+│   │   ├── deprecation>=2.1.0
+│   │   │   └── packaging
+│   │   ├── domdf-python-tools>=1.7.0
+│   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.20
+│   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   ├── natsort>=7.0.1
+│   │   │   └── typing-extensions>=3.7.4.1
+│   │   ├── enum-tools>=0.6.1
+│   │   │   ├── pygments>=2.6.1
+│   │   │   └── typing-extensions>=3.7.4.3
+│   │   ├── matplotlib>=3.2.2; platform_machine != "aarch64" or python_version > "3.6"
+│   │   ├── matplotlib==3.2.2; platform_machine == "aarch64" and python_version == "3.6"
+│   │   ├── netcdf4>=1.5.0
+│   │   ├── numpy>=1.19.2; platform_system != "Windows"
+│   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
+│   │   ├── openpyxl>=2.6.2
+│   │   │   └── et-xmlfile
+│   │   ├── pandas>=1.0.0
+│   │   ├── pymzml>=2.2.1; python_version >= "3.8"
+│   │   │   ├── numpy>=1.8.0
+│   │   │   └── regex
+│   │   ├── pymzml<2.6.0,>=2.2.1; python_version < "3.8"
+│   │   │   ├── numpy>=1.8.0
+│   │   │   └── regex
+│   │   ├── scipy>=1.2.1
+│   │   ├── sdjson>=0.3.0
+│   │   │   ├── domdf-python-tools>=2.5.2
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   └── typing-extensions>=3.7.4.3
+│   │   └── typing-extensions>=3.7.4.3
+│   ├── pyms-nist-search>=0.6.1
+│   │   ├── cftime<=1.3.0; python_version == "3.6" and platform_system == "Windows"
+│   │   ├── chemistry-tools>=0.2.5
+│   │   │   ├── apeye>=0.9.1
+│   │   │   │   ├── apeye-core>=1.0.0b2
+│   │   │   │   │   ├── domdf-python-tools>=2.6.0
+│   │   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   │   └── idna>=2.5
+│   │   │   │   ├── domdf-python-tools>=2.6.0
+│   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   ├── platformdirs>=2.3.0
+│   │   │   │   └── requests>=2.24.0
+│   │   │   │       ├── certifi>=2017.4.17
+│   │   │   │       ├── charset_normalizer<4,>=2
+│   │   │   │       ├── idna<4,>=2.5
+│   │   │   │       └── urllib3<3,>=1.21.1
+│   │   │   ├── cachecontrol>=0.13.1
+│   │   │   │   ├── msgpack<2.0.0,>=0.5.2
+│   │   │   │   └── requests>=2.16.0
+│   │   │   │       ├── certifi>=2017.4.17
+│   │   │   │       ├── charset_normalizer<4,>=2
+│   │   │   │       ├── idna<4,>=2.5
+│   │   │   │       └── urllib3<3,>=1.21.1
+│   │   │   ├── domdf-python-tools>=3.6.1
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   ├── enum-tools>=0.10.0
+│   │   │   │   ├── pygments>=2.6.1
+│   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   ├── filelock>=3.8.0
+│   │   │   ├── memoized-property>=1.0.3
+│   │   │   ├── numpy>=1.22
+│   │   │   ├── pandas>=2.0.0
+│   │   │   ├── quantities>=0.12.4
+│   │   │   │   └── numpy>=1.24
+│   │   │   ├── requests>=2.31.0
+│   │   │   │   ├── certifi>=2017.4.17
+│   │   │   │   ├── charset_normalizer<4,>=2
+│   │   │   │   ├── idna<4,>=2.5
+│   │   │   │   └── urllib3<3,>=1.21.1
+│   │   │   └── typing-extensions>=4.1.1
+│   │   ├── docker>=4.2.0
+│   │   │   ├── pywin32>=304; sys_platform == "win32"
+│   │   │   ├── requests>=2.26.0
+│   │   │   │   ├── certifi>=2017.4.17
+│   │   │   │   ├── charset_normalizer<4,>=2
+│   │   │   │   ├── idna<4,>=2.5
+│   │   │   │   └── urllib3<3,>=1.21.1
+│   │   │   └── urllib3>=1.26.0
+│   │   ├── domdf-python-tools>=3.3.0
+│   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.20
+│   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   ├── natsort>=7.0.1
+│   │   │   └── typing-extensions>=3.7.4.1
+│   │   ├── jinja2>=2.11.3
+│   │   │   └── MarkupSafe>=2.0
+│   │   ├── numpy>=1.19.1; platform_system != "Windows"
+│   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
+│   │   ├── pymassspec>=2.2.20
+│   │   │   ├── biopython>=1.74
+│   │   │   ├── cftime<=1.3.0; python_version == "3.6" and platform_system == "Windows"
+│   │   │   ├── deprecation>=2.1.0
+│   │   │   │   └── packaging
+│   │   │   ├── domdf-python-tools>=1.7.0
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   ├── enum-tools>=0.6.1
+│   │   │   │   ├── pygments>=2.6.1
+│   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   ├── matplotlib>=3.2.2; platform_machine != "aarch64" or python_version > "3.6"
+│   │   │   ├── matplotlib==3.2.2; platform_machine == "aarch64" and python_version == "3.6"
+│   │   │   ├── netcdf4>=1.5.0
+│   │   │   ├── numpy>=1.19.2; platform_system != "Windows"
+│   │   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
+│   │   │   ├── openpyxl>=2.6.2
+│   │   │   │   └── et-xmlfile
+│   │   │   ├── pandas>=1.0.0
+│   │   │   ├── pymzml>=2.2.1; python_version >= "3.8"
+│   │   │   │   ├── numpy>=1.8.0
+│   │   │   │   └── regex
+│   │   │   ├── pymzml<2.6.0,>=2.2.1; python_version < "3.8"
+│   │   │   │   ├── numpy>=1.8.0
+│   │   │   │   └── regex
+│   │   │   ├── scipy>=1.2.1
+│   │   │   ├── sdjson>=0.3.0
+│   │   │   │   ├── domdf-python-tools>=2.5.2
+│   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   └── typing-extensions>=3.7.4.3
+│   │   ├── requests>=2.22.0
+│   │   │   ├── certifi>=2017.4.17
+│   │   │   ├── charset_normalizer<4,>=2
+│   │   │   ├── idna<4,>=2.5
+│   │   │   └── urllib3<3,>=1.21.1
+│   │   └── sdjson>=0.2.6
+│   │       ├── domdf-python-tools>=2.5.2
+│   │       │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │       │   │   └── zipp>=3.20
+│   │       │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │       │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │       │   ├── natsort>=7.0.1
+│   │       │   └── typing-extensions>=3.7.4.1
+│   │       └── typing-extensions>=3.7.4.3
+│   ├── scipy>=1.9.0
+│   ├── sdjson>=0.4.0
+│   │   ├── domdf-python-tools>=2.5.2
+│   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.20
+│   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   ├── natsort>=7.0.1
+│   │   │   └── typing-extensions>=3.7.4.1
+│   │   └── typing-extensions>=3.7.4.3
+│   ├── tomli>=1.2.3; python_version < "3.11"
+│   ├── tomli-w>=1.0.0
+│   └── typing-extensions>=4.12.2
+├── libgunshotmatch-mpl>=0.6.0
+│   ├── domdf-python-tools>=3.8.0.post2
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   ├── libgunshotmatch>=0.7.0
+│   │   ├── attrs>=23.1.0
+│   │   ├── chemistry-tools>=v1.0.0b2
+│   │   │   ├── apeye>=0.9.1
+│   │   │   │   ├── apeye-core>=1.0.0b2
+│   │   │   │   │   ├── domdf-python-tools>=2.6.0
+│   │   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   │   └── idna>=2.5
+│   │   │   │   ├── domdf-python-tools>=2.6.0
+│   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   ├── platformdirs>=2.3.0
+│   │   │   │   └── requests>=2.24.0
+│   │   │   │       ├── certifi>=2017.4.17
+│   │   │   │       ├── charset_normalizer<4,>=2
+│   │   │   │       ├── idna<4,>=2.5
+│   │   │   │       └── urllib3<3,>=1.21.1
+│   │   │   ├── cachecontrol>=0.13.1
+│   │   │   │   ├── msgpack<2.0.0,>=0.5.2
+│   │   │   │   └── requests>=2.16.0
+│   │   │   │       ├── certifi>=2017.4.17
+│   │   │   │       ├── charset_normalizer<4,>=2
+│   │   │   │       ├── idna<4,>=2.5
+│   │   │   │       └── urllib3<3,>=1.21.1
+│   │   │   ├── domdf-python-tools>=3.6.1
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   ├── enum-tools>=0.10.0
+│   │   │   │   ├── pygments>=2.6.1
+│   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   ├── filelock>=3.8.0
+│   │   │   ├── memoized-property>=1.0.3
+│   │   │   ├── numpy>=1.22
+│   │   │   ├── pandas>=2.0.0
+│   │   │   ├── quantities>=0.12.4
+│   │   │   │   └── numpy>=1.24
+│   │   │   ├── requests>=2.31.0
+│   │   │   │   ├── certifi>=2017.4.17
+│   │   │   │   ├── charset_normalizer<4,>=2
+│   │   │   │   ├── idna<4,>=2.5
+│   │   │   │   └── urllib3<3,>=1.21.1
+│   │   │   └── typing-extensions>=4.1.1
+│   │   ├── dom-toml[config]>=2.2.0
+│   │   │   ├── domdf-python-tools>=2.8.0
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   └── tomli>=1.2.3; python_version < "3.11"
+│   │   ├── domdf-python-tools>=3.6.1
+│   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.20
+│   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   ├── natsort>=7.0.1
+│   │   │   └── typing-extensions>=3.7.4.1
+│   │   ├── enum-tools>=0.10.0
+│   │   │   ├── pygments>=2.6.1
+│   │   │   └── typing-extensions>=3.7.4.3
+│   │   ├── mathematical>=0.5.1
+│   │   │   ├── domdf-python-tools>=2.7.0
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   ├── numpy>=1.19.1; platform_system != "Windows"
+│   │   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
+│   │   │   ├── pandas>=1.0.1
+│   │   │   └── typing-extensions>=3.7.4.3
+│   │   ├── numpy>=1.22
+│   │   ├── pandas>=2.0.3
+│   │   ├── pymassspec>=2.3.0
+│   │   │   ├── biopython>=1.74
+│   │   │   ├── cftime<=1.3.0; python_version == "3.6" and platform_system == "Windows"
+│   │   │   ├── deprecation>=2.1.0
+│   │   │   │   └── packaging
+│   │   │   ├── domdf-python-tools>=1.7.0
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   ├── enum-tools>=0.6.1
+│   │   │   │   ├── pygments>=2.6.1
+│   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   ├── matplotlib>=3.2.2; platform_machine != "aarch64" or python_version > "3.6"
+│   │   │   ├── matplotlib==3.2.2; platform_machine == "aarch64" and python_version == "3.6"
+│   │   │   ├── netcdf4>=1.5.0
+│   │   │   ├── numpy>=1.19.2; platform_system != "Windows"
+│   │   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
+│   │   │   ├── openpyxl>=2.6.2
+│   │   │   │   └── et-xmlfile
+│   │   │   ├── pandas>=1.0.0
+│   │   │   ├── pymzml>=2.2.1; python_version >= "3.8"
+│   │   │   │   ├── numpy>=1.8.0
+│   │   │   │   └── regex
+│   │   │   ├── pymzml<2.6.0,>=2.2.1; python_version < "3.8"
+│   │   │   │   ├── numpy>=1.8.0
+│   │   │   │   └── regex
+│   │   │   ├── scipy>=1.2.1
+│   │   │   ├── sdjson>=0.3.0
+│   │   │   │   ├── domdf-python-tools>=2.5.2
+│   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   └── typing-extensions>=3.7.4.3
+│   │   ├── pyms-nist-search>=0.6.1
+│   │   │   ├── cftime<=1.3.0; python_version == "3.6" and platform_system == "Windows"
+│   │   │   ├── chemistry-tools>=0.2.5
+│   │   │   │   ├── apeye>=0.9.1
+│   │   │   │   │   ├── apeye-core>=1.0.0b2
+│   │   │   │   │   │   ├── domdf-python-tools>=2.6.0
+│   │   │   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   │   │   └── idna>=2.5
+│   │   │   │   │   ├── domdf-python-tools>=2.6.0
+│   │   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   │   ├── platformdirs>=2.3.0
+│   │   │   │   │   └── requests>=2.24.0
+│   │   │   │   │       ├── certifi>=2017.4.17
+│   │   │   │   │       ├── charset_normalizer<4,>=2
+│   │   │   │   │       ├── idna<4,>=2.5
+│   │   │   │   │       └── urllib3<3,>=1.21.1
+│   │   │   │   ├── cachecontrol>=0.13.1
+│   │   │   │   │   ├── msgpack<2.0.0,>=0.5.2
+│   │   │   │   │   └── requests>=2.16.0
+│   │   │   │   │       ├── certifi>=2017.4.17
+│   │   │   │   │       ├── charset_normalizer<4,>=2
+│   │   │   │   │       ├── idna<4,>=2.5
+│   │   │   │   │       └── urllib3<3,>=1.21.1
+│   │   │   │   ├── domdf-python-tools>=3.6.1
+│   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   ├── enum-tools>=0.10.0
+│   │   │   │   │   ├── pygments>=2.6.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   │   ├── filelock>=3.8.0
+│   │   │   │   ├── memoized-property>=1.0.3
+│   │   │   │   ├── numpy>=1.22
+│   │   │   │   ├── pandas>=2.0.0
+│   │   │   │   ├── quantities>=0.12.4
+│   │   │   │   │   └── numpy>=1.24
+│   │   │   │   ├── requests>=2.31.0
+│   │   │   │   │   ├── certifi>=2017.4.17
+│   │   │   │   │   ├── charset_normalizer<4,>=2
+│   │   │   │   │   ├── idna<4,>=2.5
+│   │   │   │   │   └── urllib3<3,>=1.21.1
+│   │   │   │   └── typing-extensions>=4.1.1
+│   │   │   ├── docker>=4.2.0
+│   │   │   │   ├── pywin32>=304; sys_platform == "win32"
+│   │   │   │   ├── requests>=2.26.0
+│   │   │   │   │   ├── certifi>=2017.4.17
+│   │   │   │   │   ├── charset_normalizer<4,>=2
+│   │   │   │   │   ├── idna<4,>=2.5
+│   │   │   │   │   └── urllib3<3,>=1.21.1
+│   │   │   │   └── urllib3>=1.26.0
+│   │   │   ├── domdf-python-tools>=3.3.0
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   ├── jinja2>=2.11.3
+│   │   │   │   └── MarkupSafe>=2.0
+│   │   │   ├── numpy>=1.19.1; platform_system != "Windows"
+│   │   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
+│   │   │   ├── pymassspec>=2.2.20
+│   │   │   │   ├── biopython>=1.74
+│   │   │   │   ├── cftime<=1.3.0; python_version == "3.6" and platform_system == "Windows"
+│   │   │   │   ├── deprecation>=2.1.0
+│   │   │   │   │   └── packaging
+│   │   │   │   ├── domdf-python-tools>=1.7.0
+│   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   ├── enum-tools>=0.6.1
+│   │   │   │   │   ├── pygments>=2.6.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   │   ├── matplotlib>=3.2.2; platform_machine != "aarch64" or python_version > "3.6"
+│   │   │   │   ├── matplotlib==3.2.2; platform_machine == "aarch64" and python_version == "3.6"
+│   │   │   │   ├── netcdf4>=1.5.0
+│   │   │   │   ├── numpy>=1.19.2; platform_system != "Windows"
+│   │   │   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
+│   │   │   │   ├── openpyxl>=2.6.2
+│   │   │   │   │   └── et-xmlfile
+│   │   │   │   ├── pandas>=1.0.0
+│   │   │   │   ├── pymzml>=2.2.1; python_version >= "3.8"
+│   │   │   │   │   ├── numpy>=1.8.0
+│   │   │   │   │   └── regex
+│   │   │   │   ├── pymzml<2.6.0,>=2.2.1; python_version < "3.8"
+│   │   │   │   │   ├── numpy>=1.8.0
+│   │   │   │   │   └── regex
+│   │   │   │   ├── scipy>=1.2.1
+│   │   │   │   ├── sdjson>=0.3.0
+│   │   │   │   │   ├── domdf-python-tools>=2.5.2
+│   │   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   │   │   └── zipp>=3.20
+│   │   │   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   │   └── typing-extensions>=3.7.4.3
+│   │   │   ├── requests>=2.22.0
+│   │   │   │   ├── certifi>=2017.4.17
+│   │   │   │   ├── charset_normalizer<4,>=2
+│   │   │   │   ├── idna<4,>=2.5
+│   │   │   │   └── urllib3<3,>=1.21.1
+│   │   │   └── sdjson>=0.2.6
+│   │   │       ├── domdf-python-tools>=2.5.2
+│   │   │       │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │       │   │   └── zipp>=3.20
+│   │   │       │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │       │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │       │   ├── natsort>=7.0.1
+│   │   │       │   └── typing-extensions>=3.7.4.1
+│   │   │       └── typing-extensions>=3.7.4.3
+│   │   ├── scipy>=1.9.0
+│   │   ├── sdjson>=0.4.0
+│   │   │   ├── domdf-python-tools>=2.5.2
+│   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.20
+│   │   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   │   ├── natsort>=7.0.1
+│   │   │   │   └── typing-extensions>=3.7.4.1
+│   │   │   └── typing-extensions>=3.7.4.3
+│   │   ├── tomli>=1.2.3; python_version < "3.11"
+│   │   ├── tomli-w>=1.0.0
+│   │   └── typing-extensions>=4.12.2
+│   ├── matplotlib>=3.7.2
+│   ├── numpy>=1.24.4
+│   └── textalloc>=0.0.9
+│       ├── matplotlib
+│       ├── numpy
+│       ├── packaging
+│       └── tqdm; python_version > "3.6"
+│           ├── colorama; platform_system == "Windows"
+│           └── importlib_metadata; python_version < "3.8"
+│               └── zipp>=3.20
+├── matplotlib>=3.7.2
+├── reportlab>=4.0.9
+│   ├── charset-normalizer
+│   └── pillow>=9.0.0
+└── svglib>=1.5.1
+    ├── cssselect2>=0.2.0
+    │   ├── tinycss2
+    │   │   └── webencodings>=0.4
+    │   └── webencodings
+    ├── lxml>=6.0.0
+    ├── reportlab>=4.4.3
+    │   ├── charset-normalizer
+    │   └── pillow>=9.0.0
+    ├── rlpycairo>=0.4.0
+    │   ├── freetype-py>=2.3
+    │   └── pycairo>=1.20.0
+    └── tinycss2>=0.6.0
+        └── webencodings>=0.4

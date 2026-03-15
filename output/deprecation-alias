@@ -1,0 +1,4 @@
+deprecation-alias
+├── deprecation>=2.1.0
+│   └── packaging
+└── packaging>=20.4

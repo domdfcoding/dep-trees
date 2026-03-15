@@ -1,0 +1,17 @@
+ytools3
+├── PyYAML>=5.1
+├── jsonpath-ng>=1.5.1
+├── jsonschema>=3.2.0
+│   ├── attrs>=22.2.0
+│   ├── jsonschema-specifications>=2023.03.6
+│   │   └── referencing>=0.31.0
+│   │       ├── attrs>=22.2.0
+│   │       ├── rpds-py>=0.7.0
+│   │       └── typing-extensions>=4.4.0; python_version < "3.13"
+│   ├── referencing>=0.28.4
+│   │   ├── attrs>=22.2.0
+│   │   ├── rpds-py>=0.7.0
+│   │   └── typing-extensions>=4.4.0; python_version < "3.13"
+│   └── rpds-py>=0.25.0
+├── strict-rfc3339==0.7
+└── typing-extensions

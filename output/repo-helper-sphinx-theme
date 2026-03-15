@@ -1,0 +1,26 @@
+repo-helper-sphinx-theme
+├── alabaster>=0.7.12
+└── sphinx>=3.0.3
+    ├── Jinja2>=3.1
+    │   └── MarkupSafe>=2.0
+    ├── Pygments>=2.17
+    ├── alabaster>=0.7.14
+    ├── babel>=2.13
+    │   └── pytz>=2015.7; python_version < "3.9"
+    ├── colorama>=0.4.6; sys_platform == "win32"
+    ├── docutils<0.23,>=0.21
+    ├── imagesize>=1.3
+    ├── packaging>=23.0
+    ├── requests>=2.30.0
+    │   ├── certifi>=2017.4.17
+    │   ├── charset_normalizer<4,>=2
+    │   ├── idna<4,>=2.5
+    │   └── urllib3<3,>=1.21.1
+    ├── roman-numerals>=1.0.0
+    ├── snowballstemmer>=2.2
+    ├── sphinxcontrib-applehelp>=1.0.7
+    ├── sphinxcontrib-devhelp>=1.0.6
+    ├── sphinxcontrib-htmlhelp>=2.0.6
+    ├── sphinxcontrib-jsmath>=1.0.1
+    ├── sphinxcontrib-qthelp>=1.0.6
+    └── sphinxcontrib-serializinghtml>=1.1.9

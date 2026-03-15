@@ -1,0 +1,5 @@
+sphinx-jinja2-compat
+├── jinja2>=2.10
+│   └── MarkupSafe>=2.0
+├── markupsafe>=1
+└── standard-imghdr==3.10.14; python_version >= "3.13"

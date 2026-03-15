@@ -1,0 +1,15 @@
+indicator-syncthing
+├── PyGObject>=3.34.0
+├── python-dateutil>=2.8.0
+│   └── six>=1.5
+├── requests>=2.18.0
+│   ├── certifi>=2017.4.17
+│   ├── charset_normalizer<4,>=2
+│   ├── idna<4,>=2.5
+│   └── urllib3<3,>=1.21.1
+└── requests-futures>=1.0.0
+    └── requests>=1.2.0
+        ├── certifi>=2017.4.17
+        ├── charset_normalizer<4,>=2
+        ├── idna<4,>=2.5
+        └── urllib3<3,>=1.21.1

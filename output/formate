@@ -1,0 +1,72 @@
+formate
+├── astatine>=0.3.1
+│   ├── asttokens>=1.1
+│   └── domdf-python-tools>=2.7.0
+│       ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│       │   └── zipp>=3.20
+│       ├── importlib-resources>=3.0.0; python_version < "3.9"
+│       │   └── zipp>=3.1.0; python_version < "3.10"
+│       ├── natsort>=7.0.1
+│       └── typing-extensions>=3.7.4.1
+├── asttokens>=2.0.4
+├── attr-utils>=0.5.5
+│   ├── attrs>=21.2.0
+│   ├── domdf-python-tools>=3.6.1
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   ├── toolz>=0.11.1
+│   ├── typing-extensions>=4.0.0
+│   └── typing-inspect>=0.6.0; python_version == "3.6"
+│       ├── mypy-extensions>=0.3.0
+│       ├── typing>=3.7.4; python_version < "3.5"
+│       └── typing-extensions>=3.7.4
+├── attrs>=20.3.0
+├── click>=7.1.2
+│   └── colorama; platform_system == "Windows"
+├── consolekit>=1.0.0
+│   ├── click>=7.1.2
+│   │   └── colorama; platform_system == "Windows"
+│   ├── colorama>=0.4.3; python_version < "3.10" and platform_system == "Windows"
+│   ├── deprecation-alias>=0.1.1
+│   │   ├── deprecation>=2.1.0
+│   │   │   └── packaging
+│   │   └── packaging>=20.4
+│   ├── domdf-python-tools>=3.8.0
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   ├── mistletoe>=0.7.2
+│   └── typing-extensions!=3.10.0.1,>=3.10.0.0
+├── dom-toml>=2.2.0
+│   ├── domdf-python-tools>=2.8.0
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   └── tomli>=1.2.3; python_version < "3.11"
+├── domdf-python-tools>=2.5.0
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── isort>=5.5.2
+├── prettyprinter>=0.18.0
+│   ├── Pygments>=2.2.0
+│   └── colorful>=0.4.0
+│       └── colorama; platform_system == "Windows"
+├── tokenize-rt>=5.0.0
+├── typing-extensions>=3.7.4.3
+└── yapf<0.43.0,>=0.30.0
+    ├── platformdirs>=3.5.1
+    └── tomli>=2.0.1; python_version < "3.11"

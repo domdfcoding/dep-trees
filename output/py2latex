@@ -1,0 +1,6 @@
+py2latex
+├── PyYaml
+├── jinja2
+│   └── MarkupSafe>=2.0
+├── markdown
+└── tabulate>=0.8.7

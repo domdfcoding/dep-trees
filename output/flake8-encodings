@@ -1,0 +1,26 @@
+flake8-encodings
+├── astatine>=0.3.1
+│   ├── asttokens>=1.1
+│   └── domdf-python-tools>=2.7.0
+│       ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│       │   └── zipp>=3.20
+│       ├── importlib-resources>=3.0.0; python_version < "3.9"
+│       │   └── zipp>=3.1.0; python_version < "3.10"
+│       ├── natsort>=7.0.1
+│       └── typing-extensions>=3.7.4.1
+├── domdf-python-tools>=2.8.1
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── flake8>=3.8.4
+│   ├── mccabe<0.8.0,>=0.7.0
+│   ├── pycodestyle<2.15.0,>=2.14.0
+│   └── pyflakes<3.5.0,>=3.4.0
+└── flake8-helper>=0.1.1
+    └── flake8>=3.8.4
+        ├── mccabe<0.8.0,>=0.7.0
+        ├── pycodestyle<2.15.0,>=2.14.0
+        └── pyflakes<3.5.0,>=3.4.0

@@ -1,0 +1,11 @@
+coverage-pyver-pragma
+├── coverage>=5.5
+├── domdf-python-tools>=2.8.0
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── packaging>=20.9
+└── pyparsing>=2.4.7

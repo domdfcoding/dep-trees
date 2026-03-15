@@ -1,0 +1,26 @@
+configconfig
+├── domdf-python-tools>=0.10.0
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── jsonschema>=3.2.0
+│   ├── attrs>=22.2.0
+│   ├── jsonschema-specifications>=2023.03.6
+│   │   └── referencing>=0.31.0
+│   │       ├── attrs>=22.2.0
+│   │       ├── rpds-py>=0.7.0
+│   │       └── typing-extensions>=4.4.0; python_version < "3.13"
+│   ├── referencing>=0.28.4
+│   │   ├── attrs>=22.2.0
+│   │   ├── rpds-py>=0.7.0
+│   │   └── typing-extensions>=4.4.0; python_version < "3.13"
+│   └── rpds-py>=0.25.0
+├── ruamel.yaml>=0.16.12
+├── typing-extensions>=3.7.4.3
+└── typing-inspect>=0.6.0
+    ├── mypy-extensions>=0.3.0
+    ├── typing>=3.7.4; python_version < "3.5"
+    └── typing-extensions>=3.7.4

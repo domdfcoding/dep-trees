@@ -1,0 +1,59 @@
+pyproject-examples
+├── coincidence>=0.4.0
+│   ├── domdf-python-tools>=2.8.0
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   ├── pytest>=6.2.0
+│   │   ├── colorama>=0.4; sys_platform == "win32"
+│   │   ├── exceptiongroup>=1; python_version < "3.11"
+│   │   │   └── typing-extensions>=4.6.0; python_version < "3.13"
+│   │   ├── iniconfig>=1.0.1
+│   │   ├── packaging>=22
+│   │   ├── pluggy<2,>=1.5
+│   │   ├── pygments>=2.7.2
+│   │   └── tomli>=1; python_version < "3.11"
+│   ├── pytest-regressions>=2.0.2
+│   │   ├── pytest>=6.2.0
+│   │   │   ├── colorama>=0.4; sys_platform == "win32"
+│   │   │   ├── exceptiongroup>=1; python_version < "3.11"
+│   │   │   │   └── typing-extensions>=4.6.0; python_version < "3.13"
+│   │   │   ├── iniconfig>=1.0.1
+│   │   │   ├── packaging>=22
+│   │   │   ├── pluggy<2,>=1.5
+│   │   │   ├── pygments>=2.7.2
+│   │   │   └── tomli>=1; python_version < "3.11"
+│   │   ├── pytest-datadir>=1.7.0
+│   │   │   └── pytest>=7.0
+│   │   │       ├── colorama>=0.4; sys_platform == "win32"
+│   │   │       ├── exceptiongroup>=1; python_version < "3.11"
+│   │   │       │   └── typing-extensions>=4.6.0; python_version < "3.13"
+│   │   │       ├── iniconfig>=1.0.1
+│   │   │       ├── packaging>=22
+│   │   │       ├── pluggy<2,>=1.5
+│   │   │       ├── pygments>=2.7.2
+│   │   │       └── tomli>=1; python_version < "3.11"
+│   │   └── pyyaml
+│   └── typing-extensions>=3.7.4.3
+├── dom-toml>=0.4.0
+│   ├── domdf-python-tools>=2.8.0
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   └── tomli>=1.2.3; python_version < "3.11"
+├── packaging>=21.3
+└── pytest>=6.2.3
+    ├── colorama>=0.4; sys_platform == "win32"
+    ├── exceptiongroup>=1; python_version < "3.11"
+    │   └── typing-extensions>=4.6.0; python_version < "3.13"
+    ├── iniconfig>=1.0.1
+    ├── packaging>=22
+    ├── pluggy<2,>=1.5
+    ├── pygments>=2.7.2
+    └── tomli>=1; python_version < "3.11"

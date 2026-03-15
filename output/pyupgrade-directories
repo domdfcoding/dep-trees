@@ -1,0 +1,3 @@
+pyupgrade-directories
+└── pyupgrade>=2.5.0
+    └── tokenize-rt>=6.1.0

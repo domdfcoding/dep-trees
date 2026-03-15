@@ -1,0 +1,15 @@
+attr-utils
+├── attrs>=21.2.0
+├── domdf-python-tools>=3.6.1
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── toolz>=0.11.1
+├── typing-extensions>=4.0.0
+└── typing-inspect>=0.6.0; python_version == "3.6"
+    ├── mypy-extensions>=0.3.0
+    ├── typing>=3.7.4; python_version < "3.5"
+    └── typing-extensions>=3.7.4

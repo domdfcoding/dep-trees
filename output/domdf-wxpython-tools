@@ -1,0 +1,37 @@
+domdf-wxpython-tools
+├── cawdrey>=0.1.5
+│   ├── domdf-python-tools>=1.1.0
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   └── typing-extensions>=3.7.4.3
+├── domdf-python-tools>=0.9.0
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── mathematical>=0.1.7
+│   ├── domdf-python-tools>=2.7.0
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   ├── numpy>=1.19.1; platform_system != "Windows"
+│   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
+│   ├── pandas>=1.0.1
+│   └── typing-extensions>=3.7.4.3
+├── matplotlib>=3.0.0
+├── numpy>=1.16.0
+├── pillow>=6.2.3
+├── tinycss>=0.4
+├── typing-extensions>=3.10.0.0
+├── webcolors>=1.10
+├── wxpython>=4.0.7; platform_system == "Windows" and python_version < "3.9"
+└── wxpython>=4.0.7; platform_system == "Darwin" and python_version < "3.9"

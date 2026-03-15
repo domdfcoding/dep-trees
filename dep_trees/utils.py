@@ -27,7 +27,7 @@ Utility functions.
 #
 
 # stdlib
-from typing import Dict, Iterator, Set
+from typing import Dict, Iterator, List
 
 # 3rd party
 from domdf_python_tools.iterative import Branch
@@ -41,7 +41,7 @@ from shippinglabel_pypi import get_wheel_url
 
 __all__ = ["get_dependencies", "get_dependency_tree", "iter_my_repos"]
 
-dependency_cache: Dict[str, Set[ComparableRequirement]] = {}
+dependency_cache: Dict[str, List[ComparableRequirement]] = {}
 
 users = [
 		"domdfcoding",
@@ -68,39 +68,38 @@ def iter_my_repos(client: GitHub) -> Iterator[ShortRepository]:
 	yield from iter_repos(client, users, organizations)
 
 
-def get_dependencies(requirement: ComparableRequirement) -> Set[ComparableRequirement]:
+def get_dependencies(requirement: ComparableRequirement) -> List[ComparableRequirement]:
 	"""
 	Returns the direct dependencies of the given requirement.
 
 	:param requirement:
 	"""
 
-	if requirement.name in dependency_cache:
-		return dependency_cache[requirement.name]
+	if requirement.name not in dependency_cache:
 
-	with PyPIJSON() as pypi:
-		pypi_metadata = pypi.get_metadata(requirement.name)
+		with PyPIJSON() as pypi:
+			pypi_metadata = pypi.get_metadata(requirement.name)
 
-	dependencies = set()
+		dependencies = set()
 
-	try:
-		wheel_url = get_wheel_url(pypi_metadata.name, pypi_metadata.version, strict=True)
-	except ValueError:
-		# TODO: Try older version or use sdist
-		pass
-	else:
-		with RemoteWheelDistribution.from_url(wheel_url) as wheel:
-			for dep in wheel.get_metadata().get_all("Requires-Dist", default=[]):
-				if "extra == " in dep:
-					continue
+		try:
+			wheel_url = get_wheel_url(pypi_metadata.name, pypi_metadata.version, strict=True)
+		except ValueError:
+			# TODO: Try older version or use sdist
+			pass
+		else:
+			with RemoteWheelDistribution.from_url(wheel_url) as wheel:
+				for dep in wheel.get_metadata().get_all("Requires-Dist", default=[]):
+					if "extra == " in dep:
+						continue
 
-				# TODO: check extra against requirement
+					# TODO: check extra against requirement
 
-				dependencies.add(ComparableRequirement(dep))
+					dependencies.add(ComparableRequirement(dep))
 
-	dependency_cache[requirement.name] = dependencies
+		dependency_cache[requirement.name] = sorted(dependencies)
 
-	return dependencies
+	return dependency_cache[requirement.name]
 
 
 def get_dependency_tree(requirement: ComparableRequirement) -> Iterator[Branch]:

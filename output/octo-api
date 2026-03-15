@@ -1,0 +1,56 @@
+octo-api
+├── apeye>=0.3.0
+│   ├── apeye-core>=1.0.0b2
+│   │   ├── domdf-python-tools>=2.6.0
+│   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.20
+│   │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   │   ├── natsort>=7.0.1
+│   │   │   └── typing-extensions>=3.7.4.1
+│   │   └── idna>=2.5
+│   ├── domdf-python-tools>=2.6.0
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   ├── platformdirs>=2.3.0
+│   └── requests>=2.24.0
+│       ├── certifi>=2017.4.17
+│       ├── charset_normalizer<4,>=2
+│       ├── idna<4,>=2.5
+│       └── urllib3<3,>=1.21.1
+├── attr-utils>=0.5.4
+│   ├── attrs>=21.2.0
+│   ├── domdf-python-tools>=3.6.1
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   ├── toolz>=0.11.1
+│   ├── typing-extensions>=4.0.0
+│   └── typing-inspect>=0.6.0; python_version == "3.6"
+│       ├── mypy-extensions>=0.3.0
+│       ├── typing>=3.7.4; python_version < "3.5"
+│       └── typing-extensions>=3.7.4
+├── attrs>=20.2.0
+├── backports-datetime-fromisoformat==1.0.0; python_version < "3.7"
+├── domdf-python-tools>=1.5.0
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── enum-tools>=0.6.1
+│   ├── pygments>=2.6.1
+│   └── typing-extensions>=3.7.4.3
+├── prettyprinter>=0.18.0
+│   ├── Pygments>=2.2.0
+│   └── colorful>=0.4.0
+│       └── colorama; platform_system == "Windows"
+└── typing-extensions>=3.7.4.3

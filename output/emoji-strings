@@ -1,0 +1,3 @@
+emoji-strings
+├── emoji>=1.2.0
+└── tokenize-rt>=4.1.0

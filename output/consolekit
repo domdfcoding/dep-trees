@@ -1,0 +1,17 @@
+consolekit
+├── click>=7.1.2
+│   └── colorama; platform_system == "Windows"
+├── colorama>=0.4.3; python_version < "3.10" and platform_system == "Windows"
+├── deprecation-alias>=0.1.1
+│   ├── deprecation>=2.1.0
+│   │   └── packaging
+│   └── packaging>=20.4
+├── domdf-python-tools>=3.8.0
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── mistletoe>=0.7.2
+└── typing-extensions!=3.10.0.1,>=3.10.0.0

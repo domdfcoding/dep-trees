@@ -1,0 +1,6 @@
+flake8-unused-fstrings
+└── flake8-helper>=0.1.1
+    └── flake8>=3.8.4
+        ├── mccabe<0.8.0,>=0.7.0
+        ├── pycodestyle<2.15.0,>=2.14.0
+        └── pyflakes<3.5.0,>=3.4.0

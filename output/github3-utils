@@ -1,0 +1,44 @@
+github3-utils
+├── apeye-core>=1.0.0
+│   ├── domdf-python-tools>=2.6.0
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   └── idna>=2.5
+├── attrs>=20.3.0
+├── click>=7.1.2
+│   └── colorama; platform_system == "Windows"
+├── cryptography<40; implementation_name == "pypy" and python_version <= "3.7"
+│   ├── cffi>=2.0.0; python_full_version >= "3.9" and platform_python_implementation != "PyPy"
+│   ├── cffi>=1.14; python_full_version == "3.8.*" and platform_python_implementation != "PyPy"
+│   └── typing-extensions>=4.13.2; python_full_version < "3.11"
+├── domdf-python-tools>=1.1.0
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+├── github3-py>=1.3.0
+│   ├── pyjwt[crypto]>=2.3.0
+│   │   └── typing_extensions>=4.0; python_version < "3.11"
+│   ├── python-dateutil>=2.6.0
+│   │   └── six>=1.5
+│   ├── requests>=2.18
+│   │   ├── certifi>=2017.4.17
+│   │   ├── charset_normalizer<4,>=2
+│   │   ├── idna<4,>=2.5
+│   │   └── urllib3<3,>=1.21.1
+│   └── uritemplate>=3.0.0
+├── pynacl>=1.4.0
+│   ├── cffi>=2.0.0; platform_python_implementation != "PyPy" and python_version >= "3.9"
+│   └── cffi>=1.4.1; platform_python_implementation != "PyPy" and python_version < "3.9"
+├── requests>=2.25.1
+│   ├── certifi>=2017.4.17
+│   ├── charset_normalizer<4,>=2
+│   ├── idna<4,>=2.5
+│   └── urllib3<3,>=1.21.1
+└── typing-extensions!=3.10.0.1,>=3.10.0.0
