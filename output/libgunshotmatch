@@ -20,17 +20,17 @@ libgunshotmatch
 │   │   │   └── typing-extensions>=3.7.4.1
 │   │   ├── platformdirs>=2.3.0
 │   │   └── requests>=2.24.0
-│   │       ├── certifi>=2017.4.17
+│   │       ├── certifi>=2023.5.7
 │   │       ├── charset_normalizer<4,>=2
 │   │       ├── idna<4,>=2.5
-│   │       └── urllib3<3,>=1.21.1
+│   │       └── urllib3<3,>=1.26
 │   ├── cachecontrol>=0.13.1
 │   │   ├── msgpack<2.0.0,>=0.5.2
 │   │   └── requests>=2.16.0
-│   │       ├── certifi>=2017.4.17
+│   │       ├── certifi>=2023.5.7
 │   │       ├── charset_normalizer<4,>=2
 │   │       ├── idna<4,>=2.5
-│   │       └── urllib3<3,>=1.21.1
+│   │       └── urllib3<3,>=1.26
 │   ├── domdf-python-tools>=3.6.1
 │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
 │   │   │   └── zipp>=3.20
@@ -45,13 +45,19 @@ libgunshotmatch
 │   ├── memoized-property>=1.0.3
 │   ├── numpy>=1.22
 │   ├── pandas>=2.0.0
+│   │   ├── numpy>=2.3.3; python_version >= "3.14"
+│   │   ├── numpy>=1.26.0; python_version < "3.14"
+│   │   ├── python-dateutil>=2.8.2
+│   │   │   └── six>=1.5
+│   │   ├── tzdata; sys_platform == "win32"
+│   │   └── tzdata; sys_platform == "emscripten"
 │   ├── quantities>=0.12.4
 │   │   └── numpy>=1.24
 │   ├── requests>=2.31.0
-│   │   ├── certifi>=2017.4.17
+│   │   ├── certifi>=2023.5.7
 │   │   ├── charset_normalizer<4,>=2
 │   │   ├── idna<4,>=2.5
-│   │   └── urllib3<3,>=1.21.1
+│   │   └── urllib3<3,>=1.26
 │   └── typing-extensions>=4.1.1
 ├── dom-toml[config]>=2.2.0
 │   ├── domdf-python-tools>=2.8.0
@@ -83,12 +89,26 @@ libgunshotmatch
 │   ├── numpy>=1.19.1; platform_system != "Windows"
 │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
 │   ├── pandas>=1.0.1
+│   │   ├── numpy>=2.3.3; python_version >= "3.14"
+│   │   ├── numpy>=1.26.0; python_version < "3.14"
+│   │   ├── python-dateutil>=2.8.2
+│   │   │   └── six>=1.5
+│   │   ├── tzdata; sys_platform == "win32"
+│   │   └── tzdata; sys_platform == "emscripten"
 │   └── typing-extensions>=3.7.4.3
 ├── numpy>=1.22
 ├── pandas>=2.0.3
+│   ├── numpy>=2.3.3; python_version >= "3.14"
+│   ├── numpy>=1.26.0; python_version < "3.14"
+│   ├── python-dateutil>=2.8.2
+│   │   └── six>=1.5
+│   ├── tzdata; sys_platform == "win32"
+│   └── tzdata; sys_platform == "emscripten"
 ├── pymassspec>=2.3.0
 │   ├── biopython>=1.74
+│   │   └── numpy
 │   ├── cftime<=1.3.0; python_version == "3.6" and platform_system == "Windows"
+│   │   └── numpy
 │   ├── deprecation>=2.1.0
 │   │   └── packaging
 │   ├── domdf-python-tools>=1.7.0
@@ -102,13 +122,41 @@ libgunshotmatch
 │   │   ├── pygments>=2.6.1
 │   │   └── typing-extensions>=3.7.4.3
 │   ├── matplotlib>=3.2.2; platform_machine != "aarch64" or python_version > "3.6"
+│   │   ├── contourpy>=1.0.1
+│   │   │   └── numpy>=1.25
+│   │   ├── cycler>=0.10
+│   │   ├── fonttools>=4.22.0
+│   │   ├── kiwisolver>=1.3.1
+│   │   ├── numpy>=1.23
+│   │   ├── packaging>=20.0
+│   │   ├── pillow>=8
+│   │   ├── pyparsing>=3
+│   │   └── python-dateutil>=2.7
+│   │       └── six>=1.5
 │   ├── matplotlib==3.2.2; platform_machine == "aarch64" and python_version == "3.6"
+│   │   ├── cycler>=0.10
+│   │   ├── kiwisolver>=1.0.1
+│   │   ├── numpy>=1.11
+│   │   ├── pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1
+│   │   └── python-dateutil>=2.1
+│   │       └── six>=1.5
 │   ├── netcdf4>=1.5.0
+│   │   ├── certifi
+│   │   ├── cftime
+│   │   │   └── numpy>=1.21.2
+│   │   ├── numpy>=2.3.0; platform_system == "Windows" and platform_machine == "ARM64"
+│   │   └── numpy>=1.21.2; platform_system != "Windows" or platform_machine != "ARM64"
 │   ├── numpy>=1.19.2; platform_system != "Windows"
 │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
 │   ├── openpyxl>=2.6.2
 │   │   └── et-xmlfile
 │   ├── pandas>=1.0.0
+│   │   ├── numpy>=2.3.3; python_version >= "3.14"
+│   │   ├── numpy>=1.26.0; python_version < "3.14"
+│   │   ├── python-dateutil>=2.8.2
+│   │   │   └── six>=1.5
+│   │   ├── tzdata; sys_platform == "win32"
+│   │   └── tzdata; sys_platform == "emscripten"
 │   ├── pymzml>=2.2.1; python_version >= "3.8"
 │   │   ├── numpy>=1.8.0
 │   │   └── regex
@@ -116,6 +164,7 @@ libgunshotmatch
 │   │   ├── numpy>=1.8.0
 │   │   └── regex
 │   ├── scipy>=1.2.1
+│   │   └── numpy<2.7,>=1.26.4
 │   ├── sdjson>=0.3.0
 │   │   ├── domdf-python-tools>=2.5.2
 │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
@@ -128,6 +177,7 @@ libgunshotmatch
 │   └── typing-extensions>=3.7.4.3
 ├── pyms-nist-search>=0.6.1
 │   ├── cftime<=1.3.0; python_version == "3.6" and platform_system == "Windows"
+│   │   └── numpy
 │   ├── chemistry-tools>=0.2.5
 │   │   ├── apeye>=0.9.1
 │   │   │   ├── apeye-core>=1.0.0b2
@@ -148,17 +198,17 @@ libgunshotmatch
 │   │   │   │   └── typing-extensions>=3.7.4.1
 │   │   │   ├── platformdirs>=2.3.0
 │   │   │   └── requests>=2.24.0
-│   │   │       ├── certifi>=2017.4.17
+│   │   │       ├── certifi>=2023.5.7
 │   │   │       ├── charset_normalizer<4,>=2
 │   │   │       ├── idna<4,>=2.5
-│   │   │       └── urllib3<3,>=1.21.1
+│   │   │       └── urllib3<3,>=1.26
 │   │   ├── cachecontrol>=0.13.1
 │   │   │   ├── msgpack<2.0.0,>=0.5.2
 │   │   │   └── requests>=2.16.0
-│   │   │       ├── certifi>=2017.4.17
+│   │   │       ├── certifi>=2023.5.7
 │   │   │       ├── charset_normalizer<4,>=2
 │   │   │       ├── idna<4,>=2.5
-│   │   │       └── urllib3<3,>=1.21.1
+│   │   │       └── urllib3<3,>=1.26
 │   │   ├── domdf-python-tools>=3.6.1
 │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
 │   │   │   │   └── zipp>=3.20
@@ -173,21 +223,27 @@ libgunshotmatch
 │   │   ├── memoized-property>=1.0.3
 │   │   ├── numpy>=1.22
 │   │   ├── pandas>=2.0.0
+│   │   │   ├── numpy>=2.3.3; python_version >= "3.14"
+│   │   │   ├── numpy>=1.26.0; python_version < "3.14"
+│   │   │   ├── python-dateutil>=2.8.2
+│   │   │   │   └── six>=1.5
+│   │   │   ├── tzdata; sys_platform == "win32"
+│   │   │   └── tzdata; sys_platform == "emscripten"
 │   │   ├── quantities>=0.12.4
 │   │   │   └── numpy>=1.24
 │   │   ├── requests>=2.31.0
-│   │   │   ├── certifi>=2017.4.17
+│   │   │   ├── certifi>=2023.5.7
 │   │   │   ├── charset_normalizer<4,>=2
 │   │   │   ├── idna<4,>=2.5
-│   │   │   └── urllib3<3,>=1.21.1
+│   │   │   └── urllib3<3,>=1.26
 │   │   └── typing-extensions>=4.1.1
 │   ├── docker>=4.2.0
 │   │   ├── pywin32>=304; sys_platform == "win32"
 │   │   ├── requests>=2.26.0
-│   │   │   ├── certifi>=2017.4.17
+│   │   │   ├── certifi>=2023.5.7
 │   │   │   ├── charset_normalizer<4,>=2
 │   │   │   ├── idna<4,>=2.5
-│   │   │   └── urllib3<3,>=1.21.1
+│   │   │   └── urllib3<3,>=1.26
 │   │   └── urllib3>=1.26.0
 │   ├── domdf-python-tools>=3.3.0
 │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
@@ -202,7 +258,9 @@ libgunshotmatch
 │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
 │   ├── pymassspec>=2.2.20
 │   │   ├── biopython>=1.74
+│   │   │   └── numpy
 │   │   ├── cftime<=1.3.0; python_version == "3.6" and platform_system == "Windows"
+│   │   │   └── numpy
 │   │   ├── deprecation>=2.1.0
 │   │   │   └── packaging
 │   │   ├── domdf-python-tools>=1.7.0
@@ -216,13 +274,41 @@ libgunshotmatch
 │   │   │   ├── pygments>=2.6.1
 │   │   │   └── typing-extensions>=3.7.4.3
 │   │   ├── matplotlib>=3.2.2; platform_machine != "aarch64" or python_version > "3.6"
+│   │   │   ├── contourpy>=1.0.1
+│   │   │   │   └── numpy>=1.25
+│   │   │   ├── cycler>=0.10
+│   │   │   ├── fonttools>=4.22.0
+│   │   │   ├── kiwisolver>=1.3.1
+│   │   │   ├── numpy>=1.23
+│   │   │   ├── packaging>=20.0
+│   │   │   ├── pillow>=8
+│   │   │   ├── pyparsing>=3
+│   │   │   └── python-dateutil>=2.7
+│   │   │       └── six>=1.5
 │   │   ├── matplotlib==3.2.2; platform_machine == "aarch64" and python_version == "3.6"
+│   │   │   ├── cycler>=0.10
+│   │   │   ├── kiwisolver>=1.0.1
+│   │   │   ├── numpy>=1.11
+│   │   │   ├── pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1
+│   │   │   └── python-dateutil>=2.1
+│   │   │       └── six>=1.5
 │   │   ├── netcdf4>=1.5.0
+│   │   │   ├── certifi
+│   │   │   ├── cftime
+│   │   │   │   └── numpy>=1.21.2
+│   │   │   ├── numpy>=2.3.0; platform_system == "Windows" and platform_machine == "ARM64"
+│   │   │   └── numpy>=1.21.2; platform_system != "Windows" or platform_machine != "ARM64"
 │   │   ├── numpy>=1.19.2; platform_system != "Windows"
 │   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
 │   │   ├── openpyxl>=2.6.2
 │   │   │   └── et-xmlfile
 │   │   ├── pandas>=1.0.0
+│   │   │   ├── numpy>=2.3.3; python_version >= "3.14"
+│   │   │   ├── numpy>=1.26.0; python_version < "3.14"
+│   │   │   ├── python-dateutil>=2.8.2
+│   │   │   │   └── six>=1.5
+│   │   │   ├── tzdata; sys_platform == "win32"
+│   │   │   └── tzdata; sys_platform == "emscripten"
 │   │   ├── pymzml>=2.2.1; python_version >= "3.8"
 │   │   │   ├── numpy>=1.8.0
 │   │   │   └── regex
@@ -230,6 +316,7 @@ libgunshotmatch
 │   │   │   ├── numpy>=1.8.0
 │   │   │   └── regex
 │   │   ├── scipy>=1.2.1
+│   │   │   └── numpy<2.7,>=1.26.4
 │   │   ├── sdjson>=0.3.0
 │   │   │   ├── domdf-python-tools>=2.5.2
 │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
@@ -241,10 +328,10 @@ libgunshotmatch
 │   │   │   └── typing-extensions>=3.7.4.3
 │   │   └── typing-extensions>=3.7.4.3
 │   ├── requests>=2.22.0
-│   │   ├── certifi>=2017.4.17
+│   │   ├── certifi>=2023.5.7
 │   │   ├── charset_normalizer<4,>=2
 │   │   ├── idna<4,>=2.5
-│   │   └── urllib3<3,>=1.21.1
+│   │   └── urllib3<3,>=1.26
 │   └── sdjson>=0.2.6
 │       ├── domdf-python-tools>=2.5.2
 │       │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
@@ -255,6 +342,7 @@ libgunshotmatch
 │       │   └── typing-extensions>=3.7.4.1
 │       └── typing-extensions>=3.7.4.3
 ├── scipy>=1.9.0
+│   └── numpy<2.7,>=1.26.4
 ├── sdjson>=0.4.0
 │   ├── domdf-python-tools>=2.5.2
 │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"

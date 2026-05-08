@@ -1,0 +1,24 @@
+domdf-folium-tools
+├── branca>=0.8.2
+│   └── jinja2>=3
+│       └── MarkupSafe>=2.0
+├── domdf-python-tools>=3.10.0
+│   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   └── zipp>=3.20
+│   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   └── zipp>=3.1.0; python_version < "3.10"
+│   ├── natsort>=7.0.1
+│   └── typing-extensions>=3.7.4.1
+└── folium>=0.20.0
+    ├── branca>=0.6.0
+    │   └── jinja2>=3
+    │       └── MarkupSafe>=2.0
+    ├── jinja2>=2.9
+    │   └── MarkupSafe>=2.0
+    ├── numpy
+    ├── requests
+    │   ├── certifi>=2023.5.7
+    │   ├── charset_normalizer<4,>=2
+    │   ├── idna<4,>=2.5
+    │   └── urllib3<3,>=1.26
+    └── xyzservices

@@ -37,15 +37,36 @@ pysetwacom
 │   │   ├── numpy>=1.19.1; platform_system != "Windows"
 │   │   ├── numpy!=1.19.4,>=1.19.3; platform_system == "Windows"
 │   │   ├── pandas>=1.0.1
+│   │   │   ├── numpy>=2.3.3; python_version >= "3.14"
+│   │   │   ├── numpy>=1.26.0; python_version < "3.14"
+│   │   │   ├── python-dateutil>=2.8.2
+│   │   │   │   └── six>=1.5
+│   │   │   ├── tzdata; sys_platform == "win32"
+│   │   │   └── tzdata; sys_platform == "emscripten"
 │   │   └── typing-extensions>=3.7.4.3
 │   ├── matplotlib>=3.0.0
+│   │   ├── contourpy>=1.0.1
+│   │   │   └── numpy>=1.25
+│   │   ├── cycler>=0.10
+│   │   ├── fonttools>=4.22.0
+│   │   ├── kiwisolver>=1.3.1
+│   │   ├── numpy>=1.23
+│   │   ├── packaging>=20.0
+│   │   ├── pillow>=8
+│   │   ├── pyparsing>=3
+│   │   └── python-dateutil>=2.7
+│   │       └── six>=1.5
 │   ├── numpy>=1.16.0
 │   ├── pillow>=6.2.3
 │   ├── tinycss>=0.4
 │   ├── typing-extensions>=3.10.0.0
 │   ├── webcolors>=1.10
 │   ├── wxpython>=4.0.7; platform_system == "Windows" and python_version < "3.9"
+│   │   ├── numpy; python_version >= "3.0" and python_version < "3.12"
+│   │   └── typing-extensions; python_version < "3.11"
 │   └── wxpython>=4.0.7; platform_system == "Darwin" and python_version < "3.9"
+│       ├── numpy; python_version >= "3.0" and python_version < "3.12"
+│       └── typing-extensions; python_version < "3.11"
 ├── pid>=2.2.5
 │   └── psutil>=5.4.8; sys_platform == "win32"
 └── sh>=1.12.14

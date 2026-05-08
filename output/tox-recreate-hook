@@ -18,6 +18,9 @@ tox-recreate-hook
     ├── pyproject-api>=1.10
     │   ├── packaging>=25
     │   └── tomli>=2.3; python_version < "3.11"
+    ├── python-discovery>=1.2.2
+    │   ├── filelock>=3.15.4
+    │   └── platformdirs<5,>=4.3.6
     ├── tomli>=2.4; python_version < "3.11"
     ├── tomli-w>=1.2
     ├── typing-extensions>=4.15; python_version < "3.11"
@@ -28,7 +31,7 @@ tox-recreate-hook
         ├── importlib-metadata>=6.6; python_version < "3.8"
         │   └── zipp>=3.20
         ├── platformdirs<5,>=3.9.1
-        ├── python-discovery>=1
+        ├── python-discovery>=1.2.2
         │   ├── filelock>=3.15.4
         │   └── platformdirs<5,>=4.3.6
         └── typing-extensions>=4.13.2; python_version < "3.11"

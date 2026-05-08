@@ -18,10 +18,10 @@ shippinglabel-pypi
 │   │   └── typing-extensions>=3.7.4.1
 │   ├── platformdirs>=2.3.0
 │   └── requests>=2.24.0
-│       ├── certifi>=2017.4.17
+│       ├── certifi>=2023.5.7
 │       ├── charset_normalizer<4,>=2
 │       ├── idna<4,>=2.5
-│       └── urllib3<3,>=1.21.1
+│       └── urllib3<3,>=1.26
 ├── dist-meta>=0.5.0
 │   ├── domdf-python-tools>=3.1.0
 │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
@@ -60,21 +60,41 @@ shippinglabel-pypi
 │   │   │   └── typing-extensions>=3.7.4.1
 │   │   ├── platformdirs>=2.3.0
 │   │   └── requests>=2.24.0
-│   │       ├── certifi>=2017.4.17
+│   │       ├── certifi>=2023.5.7
 │   │       ├── charset_normalizer<4,>=2
 │   │       ├── idna<4,>=2.5
-│   │       └── urllib3<3,>=1.21.1
+│   │       └── urllib3<3,>=1.26
 │   ├── packaging>=21.0
 │   └── requests>=2.26.0
-│       ├── certifi>=2017.4.17
+│       ├── certifi>=2023.5.7
 │       ├── charset_normalizer<4,>=2
 │       ├── idna<4,>=2.5
-│       └── urllib3<3,>=1.21.1
+│       └── urllib3<3,>=1.26
+├── pypi-simple>=1.5.0
+│   ├── beautifulsoup4~=4.5
+│   │   ├── soupsieve>1.2; python_version >= "3.0"
+│   │   └── soupsieve<2.0,>1.2; python_version < "3.0"
+│   │       └── backports.functools-lru-cache; python_version < "3"
+│   ├── mailbits~=0.2
+│   │   └── attrs>=18.1
+│   ├── packaging>=20
+│   ├── pydantic~=2.0
+│   │   ├── annotated-types>=0.6.0
+│   │   │   └── typing-extensions>=4.0.0; python_version < "3.9"
+│   │   ├── pydantic-core==2.23.4
+│   │   │   └── typing-extensions!=4.7.0,>=4.6.0
+│   │   ├── typing-extensions>=4.6.1; python_version < "3.13"
+│   │   └── typing-extensions>=4.12.2; python_version >= "3.13"
+│   └── requests~=2.20
+│       ├── certifi>=2023.5.7
+│       ├── charset_normalizer<4,>=2
+│       ├── idna<4,>=2.5
+│       └── urllib3<3,>=1.26
 ├── requests>=2.27.1
-│   ├── certifi>=2017.4.17
+│   ├── certifi>=2023.5.7
 │   ├── charset_normalizer<4,>=2
 │   ├── idna<4,>=2.5
-│   └── urllib3<3,>=1.21.1
+│   └── urllib3<3,>=1.26
 └── shippinglabel>=1.3.1
     ├── dist-meta>=0.1.2
     │   ├── domdf-python-tools>=3.1.0

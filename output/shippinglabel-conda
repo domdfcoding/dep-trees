@@ -18,10 +18,10 @@ shippinglabel-conda
 │   │   └── typing-extensions>=3.7.4.1
 │   ├── platformdirs>=2.3.0
 │   └── requests>=2.24.0
-│       ├── certifi>=2017.4.17
+│       ├── certifi>=2023.5.7
 │       ├── charset_normalizer<4,>=2
 │       ├── idna<4,>=2.5
-│       └── urllib3<3,>=1.21.1
+│       └── urllib3<3,>=1.26
 ├── domdf-python-tools>=3.3.0
 │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
 │   │   └── zipp>=3.20

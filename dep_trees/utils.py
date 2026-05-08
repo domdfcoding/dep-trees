@@ -34,10 +34,12 @@ from domdf_python_tools.iterative import Branch
 from github3 import GitHub
 from github3.repos import ShortRepository
 from github3_utils import iter_repos
+from packaging.tags import sys_tags
+from packaging.version import Version
 from pypi_json import PyPIJSON
 from remote_wheel import RemoteWheelDistribution
 from shippinglabel.requirements import ComparableRequirement
-from shippinglabel_pypi import get_wheel_url
+from shippinglabel_pypi import get_wheel_tag_mapping
 
 __all__ = ["get_dependencies", "get_dependency_tree", "iter_my_repos"]
 
@@ -75,31 +77,55 @@ def get_dependencies(requirement: ComparableRequirement) -> List[ComparableRequi
 	:param requirement:
 	"""
 
-	if requirement.name not in dependency_cache:
-
+	if not len(requirement.specifier):
+		version = None
+	elif len(requirement.specifier) == 1 and tuple(requirement.specifier)[0].operator in {'>', ">="}:
+		version = None
+	else:
 		with PyPIJSON() as pypi:
 			pypi_metadata = pypi.get_metadata(requirement.name)
 
+		all_versions = pypi_metadata.releases
+		compatible_versions = list(requirement.specifier.filter(all_versions))
+		version = max(compatible_versions)
+		assert version in requirement.specifier
+
+	if (requirement.name, version) not in dependency_cache:
+
+		with PyPIJSON() as pypi:
+			pypi_metadata = pypi.get_metadata(requirement.name, version=version)
+
+		if version is not None:
+			assert pypi_metadata.version == Version(version)
+
 		dependencies = set()
 
-		try:
-			wheel_url = get_wheel_url(pypi_metadata.name, pypi_metadata.version, strict=True)
-		except ValueError:
-			# TODO: Try older version or use sdist
-			pass
+		tag_url_map, _ = get_wheel_tag_mapping(pypi_metadata.name, version)
+		# Try current platform tags first
+		for tag in sys_tags():
+			if tag in tag_url_map:
+				wheel_url = str(tag_url_map[tag])
+				break
 		else:
-			with RemoteWheelDistribution.from_url(wheel_url) as wheel:
-				for dep in wheel.get_metadata().get_all("Requires-Dist", default=[]):
-					if "extra == " in dep:
-						continue
+			if tag_url_map:
+				# Take any one
+				wheel_url = next(iter(tag_url_map.values()))
+			else:
+				# TODO: try sdist
+				return []
 
-					# TODO: check extra against requirement
+		with RemoteWheelDistribution.from_url(wheel_url) as wheel:
+			for dep in wheel.get_metadata().get_all("Requires-Dist", default=[]):
+				if "extra == " in dep:
+					continue
 
-					dependencies.add(ComparableRequirement(dep))
+				# TODO: check extra against requirement
 
-		dependency_cache[requirement.name] = sorted(dependencies)
+				dependencies.add(ComparableRequirement(dep))
 
-	return dependency_cache[requirement.name]
+		dependency_cache[(requirement.name, version)] = sorted(dependencies)
+
+	return dependency_cache[(requirement.name, version)]
 
 
 def get_dependency_tree(requirement: ComparableRequirement) -> Iterator[Branch]:

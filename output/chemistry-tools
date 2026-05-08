@@ -18,17 +18,17 @@ chemistry-tools
 │   │   └── typing-extensions>=3.7.4.1
 │   ├── platformdirs>=2.3.0
 │   └── requests>=2.24.0
-│       ├── certifi>=2017.4.17
+│       ├── certifi>=2023.5.7
 │       ├── charset_normalizer<4,>=2
 │       ├── idna<4,>=2.5
-│       └── urllib3<3,>=1.21.1
+│       └── urllib3<3,>=1.26
 ├── cachecontrol>=0.13.1
 │   ├── msgpack<2.0.0,>=0.5.2
 │   └── requests>=2.16.0
-│       ├── certifi>=2017.4.17
+│       ├── certifi>=2023.5.7
 │       ├── charset_normalizer<4,>=2
 │       ├── idna<4,>=2.5
-│       └── urllib3<3,>=1.21.1
+│       └── urllib3<3,>=1.26
 ├── domdf-python-tools>=3.6.1
 │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
 │   │   └── zipp>=3.20
@@ -43,11 +43,17 @@ chemistry-tools
 ├── memoized-property>=1.0.3
 ├── numpy>=1.22
 ├── pandas>=2.0.0
+│   ├── numpy>=2.3.3; python_version >= "3.14"
+│   ├── numpy>=1.26.0; python_version < "3.14"
+│   ├── python-dateutil>=2.8.2
+│   │   └── six>=1.5
+│   ├── tzdata; sys_platform == "win32"
+│   └── tzdata; sys_platform == "emscripten"
 ├── quantities>=0.12.4
 │   └── numpy>=1.24
 ├── requests>=2.31.0
-│   ├── certifi>=2017.4.17
+│   ├── certifi>=2023.5.7
 │   ├── charset_normalizer<4,>=2
 │   ├── idna<4,>=2.5
-│   └── urllib3<3,>=1.21.1
+│   └── urllib3<3,>=1.26
 └── typing-extensions>=4.1.1

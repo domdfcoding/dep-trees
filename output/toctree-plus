@@ -1,29 +1,30 @@
 toctree-plus
 ├── docutils>=0.16
 ├── sphinx<7,>=3.0.3
-│   ├── Jinja2>=3.1
+│   ├── Jinja2>=3.0
 │   │   └── MarkupSafe>=2.0
-│   ├── Pygments>=2.17
-│   ├── alabaster>=0.7.14
-│   ├── babel>=2.13
+│   ├── Pygments>=2.13
+│   ├── alabaster<0.8,>=0.7
+│   ├── babel>=2.9
 │   │   └── pytz>=2015.7; python_version < "3.9"
-│   ├── colorama>=0.4.6; sys_platform == "win32"
-│   ├── docutils<0.23,>=0.21
+│   ├── colorama>=0.4.5; sys_platform == "win32"
+│   ├── docutils<0.20,>=0.18.1
 │   ├── imagesize>=1.3
-│   ├── packaging>=23.0
-│   ├── requests>=2.30.0
-│   │   ├── certifi>=2017.4.17
+│   ├── importlib-metadata>=4.8; python_version < "3.10"
+│   │   └── zipp>=3.20
+│   ├── packaging>=21.0
+│   ├── requests>=2.25.0
+│   │   ├── certifi>=2023.5.7
 │   │   ├── charset_normalizer<4,>=2
 │   │   ├── idna<4,>=2.5
-│   │   └── urllib3<3,>=1.21.1
-│   ├── roman-numerals>=1.0.0
-│   ├── snowballstemmer>=2.2
-│   ├── sphinxcontrib-applehelp>=1.0.7
-│   ├── sphinxcontrib-devhelp>=1.0.6
-│   ├── sphinxcontrib-htmlhelp>=2.0.6
-│   ├── sphinxcontrib-jsmath>=1.0.1
-│   ├── sphinxcontrib-qthelp>=1.0.6
-│   └── sphinxcontrib-serializinghtml>=1.1.9
+│   │   └── urllib3<3,>=1.26
+│   ├── snowballstemmer>=2.0
+│   ├── sphinxcontrib-applehelp
+│   ├── sphinxcontrib-devhelp
+│   ├── sphinxcontrib-htmlhelp>=2.0.0
+│   ├── sphinxcontrib-jsmath
+│   ├── sphinxcontrib-qthelp
+│   └── sphinxcontrib-serializinghtml>=1.1.5
 └── sphinx-jinja2-compat>=0.2.0
     ├── jinja2>=2.10
     │   └── MarkupSafe>=2.0

@@ -43,10 +43,10 @@ sphinx-licenseinfo
 │   ├── imagesize>=1.3
 │   ├── packaging>=23.0
 │   ├── requests>=2.30.0
-│   │   ├── certifi>=2017.4.17
+│   │   ├── certifi>=2023.5.7
 │   │   ├── charset_normalizer<4,>=2
 │   │   ├── idna<4,>=2.5
-│   │   └── urllib3<3,>=1.21.1
+│   │   └── urllib3<3,>=1.26
 │   ├── roman-numerals>=1.0.0
 │   ├── snowballstemmer>=2.2
 │   ├── sphinxcontrib-applehelp>=1.0.7
@@ -80,12 +80,12 @@ sphinx-licenseinfo
     │   │   └── typing-extensions>=3.7.4.1
     │   ├── platformdirs>=2.3.0
     │   └── requests>=2.24.0
-    │       ├── certifi>=2017.4.17
+    │       ├── certifi>=2023.5.7
     │       ├── charset_normalizer<4,>=2
     │       ├── idna<4,>=2.5
-    │       └── urllib3<3,>=1.21.1
+    │       └── urllib3<3,>=1.26
     ├── autodocsumm>=0.2.0
-    │   └── Sphinx<9.0,>=4.0
+    │   └── Sphinx<10.0,>=4.0
     │       ├── Jinja2>=3.1
     │       │   └── MarkupSafe>=2.0
     │       ├── Pygments>=2.17
@@ -97,10 +97,10 @@ sphinx-licenseinfo
     │       ├── imagesize>=1.3
     │       ├── packaging>=23.0
     │       ├── requests>=2.30.0
-    │       │   ├── certifi>=2017.4.17
+    │       │   ├── certifi>=2023.5.7
     │       │   ├── charset_normalizer<4,>=2
     │       │   ├── idna<4,>=2.5
-    │       │   └── urllib3<3,>=1.21.1
+    │       │   └── urllib3<3,>=1.26
     │       ├── roman-numerals>=1.0.0
     │       ├── snowballstemmer>=2.2
     │       ├── sphinxcontrib-applehelp>=1.0.7
@@ -115,13 +115,14 @@ sphinx-licenseinfo
     ├── cachecontrol[filecache]>=0.13.0
     │   ├── msgpack<2.0.0,>=0.5.2
     │   └── requests>=2.16.0
-    │       ├── certifi>=2017.4.17
+    │       ├── certifi>=2023.5.7
     │       ├── charset_normalizer<4,>=2
     │       ├── idna<4,>=2.5
-    │       └── urllib3<3,>=1.21.1
+    │       └── urllib3<3,>=1.26
     ├── dict2css>=0.2.3
-    │   ├── cssutils>=2.2.0
-    │   │   └── more-itertools
+    │   ├── cssutils<=2.11.0,>=2.2.0
+    │   │   └── importlib-metadata; python_version < "3.8"
+    │   │       └── zipp>=3.20
     │   └── domdf-python-tools>=2.2.0
     │       ├── importlib-metadata>=3.6.0; python_version < "3.9"
     │       │   └── zipp>=3.20
@@ -143,6 +144,7 @@ sphinx-licenseinfo
     │   └── webencodings
     ├── roman>4.0
     ├── ruamel.yaml<=0.18.16,>=0.16.12
+    │   └── ruamel.yaml.clib>=0.2.7; platform_python_implementation == "CPython" and python_version < "3.13"
     ├── sphinx>=3.2.0
     │   ├── Jinja2>=3.1
     │   │   └── MarkupSafe>=2.0
@@ -155,10 +157,10 @@ sphinx-licenseinfo
     │   ├── imagesize>=1.3
     │   ├── packaging>=23.0
     │   ├── requests>=2.30.0
-    │   │   ├── certifi>=2017.4.17
+    │   │   ├── certifi>=2023.5.7
     │   │   ├── charset_normalizer<4,>=2
     │   │   ├── idna<4,>=2.5
-    │   │   └── urllib3<3,>=1.21.1
+    │   │   └── urllib3<3,>=1.26
     │   ├── roman-numerals>=1.0.0
     │   ├── snowballstemmer>=2.2
     │   ├── sphinxcontrib-applehelp>=1.0.7
@@ -180,10 +182,10 @@ sphinx-licenseinfo
     │       ├── imagesize>=1.3
     │       ├── packaging>=23.0
     │       ├── requests>=2.30.0
-    │       │   ├── certifi>=2017.4.17
+    │       │   ├── certifi>=2023.5.7
     │       │   ├── charset_normalizer<4,>=2
     │       │   ├── idna<4,>=2.5
-    │       │   └── urllib3<3,>=1.21.1
+    │       │   └── urllib3<3,>=1.26
     │       ├── roman-numerals>=1.0.0
     │       ├── snowballstemmer>=2.2
     │       ├── sphinxcontrib-applehelp>=1.0.7
@@ -210,10 +212,10 @@ sphinx-licenseinfo
     │   │   ├── imagesize>=1.3
     │   │   ├── packaging>=23.0
     │   │   ├── requests>=2.30.0
-    │   │   │   ├── certifi>=2017.4.17
+    │   │   │   ├── certifi>=2023.5.7
     │   │   │   ├── charset_normalizer<4,>=2
     │   │   │   ├── idna<4,>=2.5
-    │   │   │   └── urllib3<3,>=1.21.1
+    │   │   │   └── urllib3<3,>=1.26
     │   │   ├── roman-numerals>=1.0.0
     │   │   ├── snowballstemmer>=2.2
     │   │   ├── sphinxcontrib-applehelp>=1.0.7
@@ -229,15 +231,15 @@ sphinx-licenseinfo
     │   │   └── MarkupSafe>=2.0
     │   ├── pygments
     │   ├── requests>=2.32.4
-    │   │   ├── certifi>=2017.4.17
+    │   │   ├── certifi>=2023.5.7
     │   │   ├── charset_normalizer<4,>=2
     │   │   ├── idna<4,>=2.5
-    │   │   └── urllib3<3,>=1.21.1
+    │   │   └── urllib3<3,>=1.26
     │   └── urllib3
     ├── sphinx-tabs<3.4.7,>=1.2.1
     │   ├── docutils
     │   ├── pygments
-    │   └── sphinx>=7
+    │   └── sphinx
     │       ├── Jinja2>=3.1
     │       │   └── MarkupSafe>=2.0
     │       ├── Pygments>=2.17
@@ -249,10 +251,10 @@ sphinx-licenseinfo
     │       ├── imagesize>=1.3
     │       ├── packaging>=23.0
     │       ├── requests>=2.30.0
-    │       │   ├── certifi>=2017.4.17
+    │       │   ├── certifi>=2023.5.7
     │       │   ├── charset_normalizer<4,>=2
     │       │   ├── idna<4,>=2.5
-    │       │   └── urllib3<3,>=1.21.1
+    │       │   └── urllib3<3,>=1.26
     │       ├── roman-numerals>=1.0.0
     │       ├── snowballstemmer>=2.2
     │       ├── sphinxcontrib-applehelp>=1.0.7
