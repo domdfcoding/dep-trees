@@ -31,16 +31,15 @@ sphinx-highlights
 │       ├── markupsafe>=1
 │       └── standard-imghdr==3.10.14; python_version >= "3.13"
 ├── dict2css>=0.2.3
-│   ├── cssutils<=2.11.0,>=2.2.0
-│   │   └── importlib-metadata; python_version < "3.8"
-│   │       └── zipp>=3.20
-│   └── domdf-python-tools>=2.2.0
-│       ├── importlib-metadata>=3.6.0; python_version < "3.9"
-│       │   └── zipp>=3.20
-│       ├── importlib-resources>=3.0.0; python_version < "3.9"
-│       │   └── zipp>=3.1.0; python_version < "3.10"
-│       ├── natsort>=7.0.1
-│       └── typing-extensions>=3.7.4.1
+│   ├── domdf-python-tools>=2.2.0
+│   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+│   │   │   └── zipp>=3.20
+│   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+│   │   │   └── zipp>=3.1.0; python_version < "3.10"
+│   │   ├── natsort>=7.0.1
+│   │   └── typing-extensions>=3.7.4.1
+│   └── tinycss2>=1.2.1
+│       └── webencodings>=0.4
 ├── docutils>=0.16
 ├── domdf-python-tools>=2.9.0
 │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
@@ -170,16 +169,15 @@ sphinx-highlights
     │       ├── idna<4,>=2.5
     │       └── urllib3<3,>=1.26
     ├── dict2css>=0.2.3
-    │   ├── cssutils<=2.11.0,>=2.2.0
-    │   │   └── importlib-metadata; python_version < "3.8"
-    │   │       └── zipp>=3.20
-    │   └── domdf-python-tools>=2.2.0
-    │       ├── importlib-metadata>=3.6.0; python_version < "3.9"
-    │       │   └── zipp>=3.20
-    │       ├── importlib-resources>=3.0.0; python_version < "3.9"
-    │       │   └── zipp>=3.1.0; python_version < "3.10"
-    │       ├── natsort>=7.0.1
-    │       └── typing-extensions>=3.7.4.1
+    │   ├── domdf-python-tools>=2.2.0
+    │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
+    │   │   │   └── zipp>=3.20
+    │   │   ├── importlib-resources>=3.0.0; python_version < "3.9"
+    │   │   │   └── zipp>=3.1.0; python_version < "3.10"
+    │   │   ├── natsort>=7.0.1
+    │   │   └── typing-extensions>=3.7.4.1
+    │   └── tinycss2>=1.2.1
+    │       └── webencodings>=0.4
     ├── docutils>=0.16
     ├── domdf-python-tools>=2.9.0
     │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
