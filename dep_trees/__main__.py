@@ -36,6 +36,7 @@ from github3 import GitHub
 from packaging.requirements import InvalidRequirement
 from pypi_json import PyPIJSON
 from shippinglabel.requirements import ComparableRequirement
+from tqdm import tqdm
 
 # this package
 from dep_trees.utils import get_dependency_tree, iter_my_repos
@@ -45,7 +46,7 @@ gh = GitHub(token=os.environ["GITHUB_TOKEN"])
 output_dir = PathPlus("output")
 output_dir.maybe_make()
 
-for repo in iter_my_repos(gh):
+for repo in tqdm(list(iter_my_repos(gh))):
 
 	with PyPIJSON() as pypi:
 		try:
