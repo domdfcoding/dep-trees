@@ -27,10 +27,11 @@ Utility functions.
 #
 
 # stdlib
-from typing import Dict, Iterator, List
+from typing import Dict, Iterator, List, Optional, Tuple
 
 # 3rd party
 from domdf_python_tools.iterative import Branch
+from domdf_python_tools.typing import PathLike
 from github3 import GitHub
 from github3.repos import ShortRepository
 from github3_utils import iter_repos
@@ -39,11 +40,10 @@ from packaging.version import Version
 from pypi_json import PyPIJSON
 from remote_wheel import RemoteWheelDistribution
 from shippinglabel.requirements import ComparableRequirement
-from shippinglabel_pypi import get_wheel_tag_mapping
 
 __all__ = ["get_dependencies", "get_dependency_tree", "iter_my_repos"]
 
-dependency_cache: Dict[str, List[ComparableRequirement]] = {}
+dependency_cache: Dict[Tuple[str, Optional[str]], List[ComparableRequirement]] = {}
 
 users = [
 		"domdfcoding",
@@ -85,6 +85,7 @@ def get_dependencies(requirement: ComparableRequirement) -> List[ComparableRequi
 		with PyPIJSON() as pypi:
 			pypi_metadata = pypi.get_metadata(requirement.name)
 
+		assert pypi_metadata.releases is not None
 		all_versions = pypi_metadata.releases
 		compatible_versions = list(requirement.specifier.filter(all_versions))
 		version = max(compatible_versions)
@@ -95,12 +96,14 @@ def get_dependencies(requirement: ComparableRequirement) -> List[ComparableRequi
 		with PyPIJSON() as pypi:
 			pypi_metadata = pypi.get_metadata(requirement.name, version=version)
 
-		if version is not None:
-			assert pypi_metadata.version == Version(version)
+			if version is not None:
+				assert pypi_metadata.version == Version(version)
 
-		dependencies = set()
+			dependencies = set()
 
-		tag_url_map, _ = get_wheel_tag_mapping(pypi_metadata.name, version)
+			tag_url_map = pypi.get_metadata(pypi_metadata.name).get_wheel_tag_mapping(version)[0]
+
+		wheel_url: PathLike
 		# Try current platform tags first
 		for tag in sys_tags():
 			if tag in tag_url_map:

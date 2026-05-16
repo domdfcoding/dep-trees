@@ -5,4 +5,3 @@ packaging>=26.0
 pypi-json>=0.5.0.post1
 remote-wheel>=0.2.0
 shippinglabel>=2.3.0
-shippinglabel-pypi>=0.2.0
