@@ -30,39 +30,36 @@ Dependency trees for my projects.
 import os
 
 # 3rd party
-from domdf_python_tools.iterative import make_tree
 from domdf_python_tools.paths import PathPlus
 from github3 import GitHub
-from packaging.requirements import InvalidRequirement
-from pypi_json import PyPIJSON
-from shippinglabel.requirements import ComparableRequirement
-from tqdm import tqdm
 
 # this package
-from dep_trees.utils import get_dependency_tree, iter_my_repos
+from dep_trees import make_dep_trees
+
+users = [
+		"domdfcoding",
+		]
+
+organizations = [
+		"sphinx-toolbox",
+		"GunShotMatch",
+		"potbanksoftware",
+		"python-coincidence",
+		"python-formate",
+		"repo-helper",
+		"PyMassSpec",
+		]
 
 gh = GitHub(token=os.environ["GITHUB_TOKEN"])
 
 output_dir = PathPlus("output")
 output_dir.maybe_make()
 
-for repo in tqdm(list(iter_my_repos(gh))):
+# TODO: config file to allow users and orgs to be specified
+for repo_name, pypi_name, tree in make_dep_trees(gh, users, organizations, {"DomDF"}):
 
-	with PyPIJSON() as pypi:
-		try:
-			pypi_metadata = pypi.get_metadata(repo.name)
-		except InvalidRequirement:
-			continue
-
-	if not pypi_metadata.ownership:
-		continue
-
-	role_users = {role["user"] for role in pypi_metadata.ownership["roles"]}
-	if "DomDF" not in role_users:
-		continue
-
-	# print(get_dependencies(pypi_metadata.name))
-	# for dep in get_dependencies(pypi_metadata.name):
+	# print(get_dependencies(pypi_name))
+	# for dep in get_dependencies(pypi_name):
 	# 	print(dep)
 	# 	for dep_dep in get_dependencies(dep):
 	# 		print(" ", dep_dep)
@@ -76,9 +73,7 @@ for repo in tqdm(list(iter_my_repos(gh))):
 	# 					print("       ", dep_dep_dep_dep_dep)
 	# 					print("         ", get_dependencies(dep_dep_dep_dep_dep))
 
-	tree = list(get_dependency_tree(ComparableRequirement(pypi_metadata.name)))
-
-	# print(pypi_metadata.name)
+	# print(pypi_name)
 	# print("\n".join(make_tree(tree)))
 
-	output_dir.joinpath(pypi_metadata.name).write_lines([pypi_metadata.name] + list(make_tree(tree)))
+	output_dir.joinpath(pypi_name).write_clean(tree)

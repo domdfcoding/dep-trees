@@ -32,42 +32,15 @@ from typing import Dict, Iterator, List, Optional, Tuple
 # 3rd party
 from domdf_python_tools.iterative import Branch
 from domdf_python_tools.typing import PathLike
-from github3 import GitHub
-from github3.repos import ShortRepository
-from github3_utils import iter_repos
 from packaging.tags import sys_tags
 from packaging.version import Version
 from pypi_json import PyPIJSON
 from remote_wheel import RemoteWheelDistribution
 from shippinglabel.requirements import ComparableRequirement
 
-__all__ = ["get_dependencies", "get_dependency_tree", "iter_my_repos"]
+__all__ = ["get_dependencies", "get_dependency_tree"]
 
 dependency_cache: Dict[Tuple[str, Optional[str]], List[ComparableRequirement]] = {}
-
-users = [
-		"domdfcoding",
-		]
-
-organizations = [
-		"sphinx-toolbox",
-		"GunShotMatch",
-		"potbanksoftware",
-		"python-coincidence",
-		"python-formate",
-		"repo-helper",
-		"PyMassSpec",
-		]
-
-
-def iter_my_repos(client: GitHub) -> Iterator[ShortRepository]:
-	"""
-	Iterate over repos in my user and organisations.
-
-	:param client:
-	"""
-
-	yield from iter_repos(client, users, organizations)
 
 
 def get_dependencies(requirement: ComparableRequirement) -> List[ComparableRequirement]:
