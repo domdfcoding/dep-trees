@@ -133,11 +133,11 @@ libgunshotmatch-mpl
 │   │   │   ├── contourpy>=1.0.1
 │   │   │   │   └── numpy>=1.25
 │   │   │   ├── cycler>=0.10
-│   │   │   ├── fonttools>=4.22.0
+│   │   │   ├── fonttools>=4.28.2
 │   │   │   ├── kiwisolver>=1.3.1
-│   │   │   ├── numpy>=1.23
+│   │   │   ├── numpy>=1.25
 │   │   │   ├── packaging>=20.0
-│   │   │   ├── pillow>=8
+│   │   │   ├── pillow>=9
 │   │   │   ├── pyparsing>=3
 │   │   │   └── python-dateutil>=2.7
 │   │   │       └── six>=1.5
@@ -172,7 +172,7 @@ libgunshotmatch-mpl
 │   │   │   ├── numpy>=1.8.0
 │   │   │   └── regex
 │   │   ├── scipy>=1.2.1
-│   │   │   └── numpy<2.7,>=1.26.4
+│   │   │   └── numpy<2.8,>=2.0.0
 │   │   ├── sdjson>=0.3.0
 │   │   │   ├── domdf-python-tools>=2.5.2
 │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
@@ -285,11 +285,11 @@ libgunshotmatch-mpl
 │   │   │   │   ├── contourpy>=1.0.1
 │   │   │   │   │   └── numpy>=1.25
 │   │   │   │   ├── cycler>=0.10
-│   │   │   │   ├── fonttools>=4.22.0
+│   │   │   │   ├── fonttools>=4.28.2
 │   │   │   │   ├── kiwisolver>=1.3.1
-│   │   │   │   ├── numpy>=1.23
+│   │   │   │   ├── numpy>=1.25
 │   │   │   │   ├── packaging>=20.0
-│   │   │   │   ├── pillow>=8
+│   │   │   │   ├── pillow>=9
 │   │   │   │   ├── pyparsing>=3
 │   │   │   │   └── python-dateutil>=2.7
 │   │   │   │       └── six>=1.5
@@ -324,7 +324,7 @@ libgunshotmatch-mpl
 │   │   │   │   ├── numpy>=1.8.0
 │   │   │   │   └── regex
 │   │   │   ├── scipy>=1.2.1
-│   │   │   │   └── numpy<2.7,>=1.26.4
+│   │   │   │   └── numpy<2.8,>=2.0.0
 │   │   │   ├── sdjson>=0.3.0
 │   │   │   │   ├── domdf-python-tools>=2.5.2
 │   │   │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
@@ -350,7 +350,7 @@ libgunshotmatch-mpl
 │   │       │   └── typing-extensions>=3.7.4.1
 │   │       └── typing-extensions>=3.7.4.3
 │   ├── scipy>=1.9.0
-│   │   └── numpy<2.7,>=1.26.4
+│   │   └── numpy<2.8,>=2.0.0
 │   ├── sdjson>=0.4.0
 │   │   ├── domdf-python-tools>=2.5.2
 │   │   │   ├── importlib-metadata>=3.6.0; python_version < "3.9"
@@ -367,11 +367,11 @@ libgunshotmatch-mpl
 │   ├── contourpy>=1.0.1
 │   │   └── numpy>=1.25
 │   ├── cycler>=0.10
-│   ├── fonttools>=4.22.0
+│   ├── fonttools>=4.28.2
 │   ├── kiwisolver>=1.3.1
-│   ├── numpy>=1.23
+│   ├── numpy>=1.25
 │   ├── packaging>=20.0
-│   ├── pillow>=8
+│   ├── pillow>=9
 │   ├── pyparsing>=3
 │   └── python-dateutil>=2.7
 │       └── six>=1.5
@@ -381,17 +381,15 @@ libgunshotmatch-mpl
     │   ├── contourpy>=1.0.1
     │   │   └── numpy>=1.25
     │   ├── cycler>=0.10
-    │   ├── fonttools>=4.22.0
+    │   ├── fonttools>=4.28.2
     │   ├── kiwisolver>=1.3.1
-    │   ├── numpy>=1.23
+    │   ├── numpy>=1.25
     │   ├── packaging>=20.0
-    │   ├── pillow>=8
+    │   ├── pillow>=9
     │   ├── pyparsing>=3
     │   └── python-dateutil>=2.7
     │       └── six>=1.5
     ├── numpy
     ├── packaging
     └── tqdm; python_version > "3.6"
-        ├── colorama; platform_system == "Windows"
-        └── importlib_metadata; python_version < "3.8"
-            └── zipp>=3.20
+        └── colorama; platform_system == "Windows"

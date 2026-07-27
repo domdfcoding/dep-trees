@@ -308,7 +308,6 @@ whey-conda
 │   │   │   ├── packaging>=20
 │   │   │   ├── pydantic~=2.0
 │   │   │   │   ├── annotated-types>=0.6.0
-│   │   │   │   │   └── typing-extensions>=4.0.0; python_version < "3.9"
 │   │   │   │   ├── pydantic-core==2.23.4
 │   │   │   │   │   └── typing-extensions!=4.7.0,>=4.6.0
 │   │   │   │   ├── typing-extensions>=4.6.1; python_version < "3.13"

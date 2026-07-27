@@ -181,8 +181,7 @@ extras-require
     │   ├── six>=1.9
     │   └── webencodings
     ├── roman>4.0
-    ├── ruamel.yaml<=0.18.16,>=0.16.12
-    │   └── ruamel.yaml.clib>=0.2.7; platform_python_implementation == "CPython" and python_version < "3.13"
+    ├── ruamel.yaml>=0.16.12
     ├── sphinx>=3.2.0
     │   ├── Jinja2>=3.1
     │   │   └── MarkupSafe>=2.0
@@ -207,8 +206,8 @@ extras-require
     │   ├── sphinxcontrib-jsmath>=1.0.1
     │   ├── sphinxcontrib-qthelp>=1.0.6
     │   └── sphinxcontrib-serializinghtml>=1.1.9
-    ├── sphinx-autodoc-typehints>=1.11.1
-    │   └── sphinx>=9.1
+    ├── sphinx-autodoc-typehints<3.6.0,>=1.11.1
+    │   └── sphinx>=8.2.3
     │       ├── Jinja2>=3.1
     │       │   └── MarkupSafe>=2.0
     │       ├── Pygments>=2.17
@@ -274,10 +273,10 @@ extras-require
     │   │   ├── idna<4,>=2.5
     │   │   └── urllib3<3,>=1.26
     │   └── urllib3
-    ├── sphinx-tabs<3.4.7,>=1.2.1
+    ├── sphinx-tabs<3.6.0,>=3.4.7
     │   ├── docutils
     │   ├── pygments
-    │   └── sphinx
+    │   └── sphinx>=7
     │       ├── Jinja2>=3.1
     │       │   └── MarkupSafe>=2.0
     │       ├── Pygments>=2.17
