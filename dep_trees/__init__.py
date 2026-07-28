@@ -30,13 +30,13 @@ Dependency trees for my projects.
 from typing import Iterable, Iterator, Tuple
 
 # 3rd party
+from araokaat import araokaat
 from domdf_python_tools.iterative import make_tree
 from github3 import GitHub
 from github3_utils import iter_repos
 from packaging.requirements import InvalidRequirement
 from pypi_json import PyPIJSON
 from shippinglabel.requirements import ComparableRequirement
-from tqdm import tqdm
 
 # this package
 from dep_trees.utils import get_dependency_tree
@@ -69,7 +69,7 @@ def make_dep_trees(
 
 	pypi_users = list(pypi_users)
 
-	progbar = tqdm(list(iter_repos(github_client, github_users, github_orgs)))
+	progbar = araokaat(list(iter_repos(github_client, github_users, github_orgs)))
 	for repo in progbar:
 		progbar.set_postfix_str(f"{repo.full_name}".ljust(40))
 

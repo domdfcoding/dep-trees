@@ -1,2 +1,1 @@
-types-tqdm
 git+https://github.com/domdfcoding/github3.py@stubs-v4
