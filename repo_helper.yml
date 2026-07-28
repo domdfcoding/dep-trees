@@ -22,3 +22,7 @@ python_versions:
  - 3.11
  - 3.12
  - 3.13
+
+
+console_scripts:
+ - dep-trees = dep_trees.__main__:main
